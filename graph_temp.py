@@ -18,13 +18,12 @@ for year in sorted(yearly_data):
     temps = []
     for d in depths:
         temps.append(yearly_data[year][d])
-    plt.plot(depths, temps, label=str(year))
-    print(depths)
+    plt.plot(depths, temps, label='5/6/' + str(year))
 
-plt.grid()
+plt.style.use('fivethirtyeight')
 plt.legend()
-plt.title('Temperature by Depth in Lake Mendota on May 6th')
-plt.xlabel('Depth')
+plt.title('Lake Mendota - Madison, WI')
+plt.xlabel('Depth (Feet)')
 plt.ylabel('Temperature (C)')
 plt.show()
 
